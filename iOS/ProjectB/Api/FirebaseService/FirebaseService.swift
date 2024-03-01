@@ -21,17 +21,13 @@ public final class FirebaseServiceImpl: FirebaseService {
     }
     
     func fetch(_ keyPath: String) -> AnyPublisher<Data?, FirebaseError> {
-        Future<RemoteConfigFetchStatus, FirebaseError> { [weak self] promise in
+        Future<Data?, FirebaseError> { [weak self] promise in
             self?.config.fetch { status, e in
                 guard status == .success, e == nil else {
                     promise(.failure(.fetchingFailed(e?.localizedDescription)))
                     return
                 }
-                promise(.success(.success))
-            }
-        }
-        .flatMap { _ in
-            Future<Data?, FirebaseError> { [weak self] promise in
+                
                 self?.config.activate { changed, error in
                     guard error == nil else {
                         promise(.failure(.activationFailed))
