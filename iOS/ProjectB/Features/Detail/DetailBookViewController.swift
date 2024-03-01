@@ -88,7 +88,7 @@ final class DetailBookViewController: UIViewController, DetailBookView {
         snapView.anchor(contentView.topAnchor,
                         leading: contentView.leadingAnchor,
                         trailing: contentView.trailingAnchor,
-                        heightConstraint: 390)
+                        heightConstraint: 460)
         
         detailedInfo.anchor(snapView.bottomAnchor,
                             leading: snapView.leadingAnchor,

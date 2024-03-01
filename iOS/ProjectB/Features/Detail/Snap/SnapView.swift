@@ -58,7 +58,6 @@ final class SnapView: UIView {
     }
     
     private func prepareCollectionView() {
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.contentInsetAdjustmentBehavior = .always
         collectionView.backgroundColor = .clear
@@ -87,7 +86,7 @@ final class SnapView: UIView {
         collectionView.anchor(topAnchor,
                               leading: leadingAnchor,
                               trailing: trailingAnchor,
-                              topConstraint: 40, heightConstraint: 250)
+                              topConstraint: 80, heightConstraint: 280)
 
         titleLabel.anchor(collectionView.bottomAnchor, topConstraint: 16)
         titleLabel.anchorCenterX(superview: self)
