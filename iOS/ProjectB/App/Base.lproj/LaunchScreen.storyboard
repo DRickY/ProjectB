@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,8 +15,37 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H5R-gT-e84" userLabel="heightView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="220"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lauch_background" translatesAutoresizingMaskIntoConstraints="NO" id="BEE-6s-DLy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book_app_title" translatesAutoresizingMaskIntoConstraints="NO" id="RlF-Zx-10u" userLabel="title">
+                                <rect key="frame" x="57" y="220" width="261" height="51"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome_book_app" translatesAutoresizingMaskIntoConstraints="NO" id="DrZ-GD-0gQ" userLabel="welcome">
+                                <rect key="frame" x="62.5" y="290" width="250" height="22"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="tableCellBlueTextColor"/>
+                        <constraints>
+                            <constraint firstItem="BEE-6s-DLy" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="0or-iS-nyc"/>
+                            <constraint firstItem="RlF-Zx-10u" firstAttribute="top" secondItem="H5R-gT-e84" secondAttribute="bottom" id="4aW-2l-wgk"/>
+                            <constraint firstItem="H5R-gT-e84" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.33" id="89K-L6-jL4"/>
+                            <constraint firstItem="H5R-gT-e84" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="97L-dc-6QS"/>
+                            <constraint firstItem="H5R-gT-e84" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Adg-hT-gaA"/>
+                            <constraint firstItem="BEE-6s-DLy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ec0-0v-AhP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H5R-gT-e84" secondAttribute="trailing" id="Jqk-b2-TeW"/>
+                            <constraint firstItem="DrZ-GD-0gQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="f3u-Cl-mHV"/>
+                            <constraint firstItem="DrZ-GD-0gQ" firstAttribute="top" secondItem="RlF-Zx-10u" secondAttribute="bottom" constant="19" id="jdc-lp-LDW"/>
+                            <constraint firstAttribute="bottom" secondItem="BEE-6s-DLy" secondAttribute="bottom" id="rrf-CP-AZ3"/>
+                            <constraint firstItem="BEE-6s-DLy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sX7-vl-97h"/>
+                            <constraint firstItem="RlF-Zx-10u" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wbE-Oc-RIG"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -22,4 +53,15 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="book_app_title" width="261" height="51"/>
+        <image name="lauch_background" width="375" height="667"/>
+        <image name="welcome_book_app" width="250" height="22"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tableCellBlueTextColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
